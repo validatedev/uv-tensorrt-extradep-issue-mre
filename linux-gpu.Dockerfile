@@ -17,6 +17,6 @@ WORKDIR /app
 COPY pyproject.toml hello.py /app/
 
 RUN uv --version \
-    && uv sync --extra linux --extra linux-gpu --extra linux-cuda
+    && uv sync --extra linux --extra linux-gpu --extra cuda
 
 CMD ["uv", "run", "python", "hello.py"]
